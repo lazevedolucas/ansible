@@ -3,14 +3,13 @@
   remote_user: root
   tasks:
   - name: Instalação de ferramentas básicas em sistemas Linux
-    apt:
-      name: {{ packages}}
-    vars:
-      packages:
+    action: apt pkg={{item}}  state=installed
+    with_items:
         - curl
+        - htop
         - vim-tiny
+        - wget
         - nmap
         - tar
-        - make
-        - wget
-        - htop
+        - zip
+        - unzip
