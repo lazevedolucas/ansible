@@ -1,0 +1,16 @@
+---
+- hosts: testes
+  remote_user: root
+  tasks:
+  - name: Instalação de ferramentas básicas em sistemas Linux
+    apt:
+      name: {{ packages}}
+    vars:
+      packages:
+        - curl
+        - vim-tiny
+        - nmap
+        - tar
+        - make
+        - wget
+        - htop
