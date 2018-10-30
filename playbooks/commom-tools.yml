@@ -5,9 +5,7 @@
   tasks:
   - name: Instalação de ferramentas básicas em sistemas Linux
     package:
-      name: {{item}}
-      state: present
-    with_items:
+      name: 
         - curl
         - htop
         - vim-tiny
@@ -16,3 +14,4 @@
         - tar
         - zip
         - unzip
+      state: present
