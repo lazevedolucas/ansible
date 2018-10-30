@@ -1,9 +1,9 @@
 ---
-- hosts: testes 
+- hosts: testes
   remote_user: root
   tasks:
   - name: Instalação de ferramentas básicas em sistemas Linux
-    action: apt pkg={{item}}  state=installed
+    action: {{ansible_pkg_mgr}} pkg={{item}}  state=installed
     with_items:
         - curl
         - htop
