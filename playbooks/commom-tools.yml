@@ -1,17 +1,18 @@
 ---
 - hosts: testes
   remote_user: root
+  include_vars: vars-commons-tools.yml
   tasks:
   - name: Instalação de ferramentas básicas em sistemas Linux
     package:
-      name: "{{item}}"
+      name: {{item}}
       state: present
-  with_items:
-      - "{{curl}}"
-      - "{{htop}}"
-      - "{{vim-tiny}}"
-      - "{{wget}}"
-      - "{{nmap}}"
-      - "{{tar}}"
-      - "{{zip}}"
-      - "{{unzip}}"
+    with_items:
+        - curl
+        - htop
+        - vim-tiny
+        - wget
+        - nmap
+        - tar
+        - zip
+        - unzip
