@@ -3,7 +3,7 @@
   remote_user: root
   tasks:
   - name: Instalação de ferramentas básicas em sistemas Linux
-    action: {{ansible_pkg_mgr}} pkg={{item}}  state=installed
+    action: apt pkg={{item}}  state=installed
     with_items:
         - curl
         - htop
