@@ -1,5 +1,5 @@
 ---
-- hosts: 10.1.0.45
+- hosts: testes 
   remote_user: root
   tasks:
   - name: Instalação de ferramentas básicas em sistemas Linux
