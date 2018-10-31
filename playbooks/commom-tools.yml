@@ -5,8 +5,8 @@
     - vars.yml
 
   tasks:
-  - name: Instalação de ferramentas básicas em sistemas APT
-    apt:
+  - name: Instalação de ferramentas básicas em sistemas Linux
+    package:
       name: "{{ packages }}"
       state: present
       install_recommends: yes
