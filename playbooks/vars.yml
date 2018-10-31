@@ -1,0 +1,11 @@
+---
+packages:
+  - curl
+  - htop
+  - vim-tiny
+  - wget
+  - nmap
+  - tar
+  - zip
+  - unzip
+  - sudo
