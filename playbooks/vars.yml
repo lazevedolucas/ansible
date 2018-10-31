@@ -1,7 +1,7 @@
 ---
 packages:
   - curl
-  - vim-tiny
+  - vim
   - wget
   - nmap
   - tar
