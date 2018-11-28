@@ -14,7 +14,7 @@
     shell:  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
   - name: Adicionando o repositório estável do Docker
-    shell: sudo add-apt-repository \ "deb [arch=amd64] https://download.docker.com/linux/ubuntu \ $(lsb_release -cs) \ stable"
+    shell: sh /home/ubuntu/addrepodocker.sh
 
   - name: Atualizando apt index
     shell: apt-get update
