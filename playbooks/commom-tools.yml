@@ -1,5 +1,5 @@
 ---
-- hosts: testes
+- hosts: docker-servers
   remote_user: root
   vars_files:
     - vars.yml

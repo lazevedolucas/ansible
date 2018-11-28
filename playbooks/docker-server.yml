@@ -1,0 +1,25 @@
+---
+- hosts: docker-servers
+  remote_user: root
+  vars_files:
+    - vars.yml
+
+  tasks:
+  - name: Instalação dos requisitos pra o Docker CE
+    package:
+      name: "{{ packages_req_docker }}"
+      state: present
+
+  - name: Adicionando a chave GPG oficial do Docker
+    shell:  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+  - name: Adicionando o repositório estável do Docker
+    shell: sudo add-apt-repository \ "deb [arch=amd64] https://download.docker.com/linux/ubuntu \ $(lsb_release -cs) \ stable"
+
+  - name: Atualizando apt index
+    shell: apt-get update
+
+  - name: Instalando o Docker CE
+    package:
+      name: docker-ce
+      state: present
